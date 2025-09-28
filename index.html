@@ -3,50 +3,75 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lab 5 - WAD621S Styling</title>
+  <title>WAD621S - Interactive Styling Lab</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <!-- Navigation -->
   <nav class="navbar">
-    <div class="logo">WAD621S</div>
-    <ul class="nav-links">
-      <li class="active"><a href="#">Home</a></li>
-      <li><a href="#">Cards</a></li>
-      <li><a href="#">Buttons</a></li>
-      <li><a href="#">Forms</a></li>
-    </ul>
-    <button class="theme-toggle">🌙</button>
+    <div class="nav-container">
+      <div class="logo">WAD621S</div>
+      <ul class="nav-links">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Cards</a></li>
+        <li><a href="#">Buttons</a></li>
+        <li><a href="#">Forms</a></li>
+      </ul>
+      <button class="theme-toggle" id="themeToggle">🌙</button>
+    </div>
   </nav>
 
-  <main>
-    <!-- Cards -->
-    <section class="cards">
-      <h2>Cards</h2>
+  <main class="main-content">
+    <!-- Cards Section -->
+    <section class="section cards-section">
+      <h2 class="section-title">Cards</h2>
       <div class="card-grid">
         <div class="card">
-          <img src="https://picsum.photos/300/200" alt="Random Image" />
+          <div class="card-image">
+            <img src="https://picsum.photos/400/250?random=1" alt="Random Image" />
+          </div>
           <div class="card-content">
-            <h3>Card Title</h3>
-            <p>This is a simple card with hover and shadow effects.</p>
-            <button class="btn primary">Read More</button>
+            <h3 class="card-title">Card Title</h3>
+            <p class="card-text">This is a simple card with hover and shadow effects. It demonstrates clean design principles.</p>
+            <div class="card-actions">
+              <button class="btn primary">Read More</button>
+            </div>
           </div>
         </div>
         <div class="card">
-          <img src="https://picsum.photos/301/200" alt="Random Image" />
+          <div class="card-image">
+            <img src="https://picsum.photos/400/250?random=2" alt="Random Image" />
+          </div>
           <div class="card-content">
-            <h3>Second Card</h3>
-            <p>Consistent rounded corners and transitions applied.</p>
-            <button class="btn outline">Learn More</button>
+            <h3 class="card-title">Second Card</h3>
+            <p class="card-text">Consistent rounded corners and transitions applied. This card has a different button style.</p>
+            <div class="card-actions">
+              <button class="btn outline">Learn More</button>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-image">
+            <img src="https://picsum.photos/400/250?random=3" alt="Random Image" />
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Interactive Card</h3>
+            <p class="card-text">This card demonstrates additional interactive elements and a more complex layout.</p>
+            <div class="card-actions">
+              <button class="btn primary">Action</button>
+              <button class="btn outline">Secondary</button>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Buttons -->
-    <section class="buttons">
-      <h2>Buttons</h2>
-      <div class="btn-group">
+    <!-- Buttons Section -->
+    <section class="section buttons-section">
+      <h2 class="section-title">Buttons</h2>
+      <div class="button-group">
         <button class="btn primary">Primary</button>
         <button class="btn success">Success</button>
         <button class="btn warning">Warning</button>
@@ -54,45 +79,210 @@
         <button class="btn outline">Outline</button>
         <button class="btn disabled" disabled>Disabled</button>
       </div>
+      <div class="button-group">
+        <button class="btn primary icon-btn">
+          <span class="material-icons">favorite</span>
+          Icon Button
+        </button>
+        <button class="btn outline icon-btn">
+          Download
+          <span class="material-icons">download</span>
+        </button>
+        <button class="btn floating">
+          <span class="material-icons">add</span>
+        </button>
+      </div>
     </section>
 
-    <!-- Chips -->
-    <section class="chips">
-      <h2>Chips</h2>
-      <div class="chip active">
-        Active Chip <span class="close">&times;</span>
-      </div>
-      <div class="chip">
-        Default Chip <span class="close">&times;</span>
-      </div>
-      <div class="chip">
-        With Icon <span>⭐</span>
+    <!-- Chips Section -->
+    <section class="section chips-section">
+      <h2 class="section-title">Chips</h2>
+      <div class="chips-container">
+        <div class="chip active">
+          Active Chip <span class="close">&times;</span>
+        </div>
+        <div class="chip">
+          Default Chip <span class="close">&times;</span>
+        </div>
+        <div class="chip">
+          <span class="material-icons">star</span>
+          With Icon
+        </div>
+        <div class="chip">
+          Filter Chip
+        </div>
+        <div class="chip">
+          Another Chip <span class="close">&times;</span>
+        </div>
       </div>
     </section>
 
-    <!-- Forms -->
-    <section class="forms">
-      <h2>Forms</h2>
-      <form>
-        <label for="name">Name</label>
-        <input type="text" id="name" placeholder="Enter your name" />
+    <!-- Forms Section -->
+    <section class="section forms-section">
+      <h2 class="section-title">Forms</h2>
+      <form class="styled-form">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" placeholder="Enter your name" />
+          <span class="form-hint">Please enter your full name</span>
+        </div>
 
-        <label for="email">Email</label>
-        <input type="email" id="email" placeholder="Enter your email" />
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="Enter your email" />
+          <span class="form-hint">We'll never share your email</span>
+        </div>
 
-        <label for="message">Message</label>
-        <textarea id="message" rows="4" placeholder="Type here..."></textarea>
+        <div class="form-group">
+          <label for="category">Category</label>
+          <select id="category">
+            <option value="">Select a category</option>
+            <option value="1">Web Development</option>
+            <option value="2">UI/UX Design</option>
+            <option value="3">Data Science</option>
+          </select>
+        </div>
 
-        <button class="btn primary" type="submit">Submit</button>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" rows="4" placeholder="Type your message here..."></textarea>
+        </div>
+
+        <div class="form-group checkbox-group">
+          <label class="checkbox-container">
+            <input type="checkbox" id="newsletter" />
+            <span class="checkmark"></span>
+            Subscribe to newsletter
+          </label>
+        </div>
+
+        <div class="form-actions">
+          <button class="btn outline" type="reset">Reset</button>
+          <button class="btn primary" type="submit">Submit</button>
+        </div>
       </form>
     </section>
+
+    <!-- Additional Components -->
+    <section class="section components-section">
+      <h2 class="section-title">Additional Components</h2>
+      
+      <!-- Progress Bars -->
+      <div class="component-group">
+        <h3>Progress Bars</h3>
+        <div class="progress-container">
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 45%"></div>
+          </div>
+          <span>45% Complete</span>
+        </div>
+        <div class="progress-container">
+          <div class="progress-bar">
+            <div class="progress-fill success" style="width: 70%"></div>
+          </div>
+          <span>70% Complete</span>
+        </div>
+        <div class="progress-container">
+          <div class="progress-bar">
+            <div class="progress-fill warning" style="width: 30%"></div>
+          </div>
+          <span>30% Complete</span>
+        </div>
+      </div>
+
+      <!-- Alerts -->
+      <div class="component-group">
+        <h3>Alerts</h3>
+        <div class="alert success">
+          <div class="alert-content">
+            <span class="material-icons">check_circle</span>
+            <span>Your action was completed successfully!</span>
+          </div>
+          <span class="alert-close">&times;</span>
+        </div>
+        <div class="alert warning">
+          <div class="alert-content">
+            <span class="material-icons">warning</span>
+            <span>Warning: There was a problem with your request.</span>
+          </div>
+          <span class="alert-close">&times;</span>
+        </div>
+        <div class="alert info">
+          <div class="alert-content">
+            <span class="material-icons">info</span>
+            <span>Information: Please read the instructions carefully.</span>
+          </div>
+          <span class="alert-close">&times;</span>
+        </div>
+      </div>
+
+      <!-- Toggle Switches -->
+      <div class="component-group">
+        <h3>Toggle Switches</h3>
+        <div class="toggle-container">
+          <label class="toggle">
+            <input type="checkbox" checked />
+            <span class="toggle-slider"></span>
+            <span class="toggle-label">Wi-Fi</span>
+          </label>
+          <label class="toggle">
+            <input type="checkbox" />
+            <span class="toggle-slider"></span>
+            <span class="toggle-label">Bluetooth</span>
+          </label>
+          <label class="toggle">
+            <input type="checkbox" checked />
+            <span class="toggle-slider"></span>
+            <span class="toggle-label">Dark Mode</span>
+          </label>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <!-- Customization Panel -->
+  <div class="customization-panel" id="customPanel">
+    <div class="panel-header">
+      <h3>Customize Styles</h3>
+      <button class="panel-close" id="panelClose">&times;</button>
+    </div>
+    <div class="panel-content">
+      <div class="form-group">
+        <label class="form-label">Primary Color</label>
+        <div class="color-options">
+          <span class="color-option active" style="background-color: #4361ee" data-color="#4361ee"></span>
+          <span class="color-option" style="background-color: #e63946" data-color="#e63946"></span>
+          <span class="color-option" style="background-color: #2a9d8f" data-color="#2a9d8f"></span>
+          <span class="color-option" style="background-color: #f4a261" data-color="#f4a261"></span>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Theme</label>
+        <select class="form-select" id="themeSelect">
+          <option value="light">Light</option>
+          <option value="dark">Dark</option>
+          <option value="blue">Blue</option>
+          <option value="green">Green</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Font Size: <span id="fontSizeValue">16px</span></label>
+        <input type="range" min="12" max="20" value="16" class="slider" id="fontSize" />
+      </div>
+      <div class="form-group">
+        <label class="form-label">Border Radius: <span id="borderRadiusValue">8px</span></label>
+        <input type="range" min="0" max="20" value="8" class="slider" id="borderRadius" />
+      </div>
+      <button class="btn outline" id="resetStyles">Reset to Default</button>
+    </div>
+  </div>
+
+  <button class="panel-toggle" id="panelToggle">
+    <span class="material-icons">palette</span>
+  </button>
+
+  <div class="toast-container" id="toastContainer"></div>
+
+  <script src="script.js"></script>
 </body>
-<script>
-  // Theme toggle script
-  const toggle = document.querySelector(".theme-toggle");
-  toggle.addEventListener("click", () => {
-    document.body.classList.toggle("dark-theme");
-  });
-</script>
 </html>
