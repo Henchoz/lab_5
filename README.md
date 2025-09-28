@@ -1,41 +1,115 @@
-  Lab 5 - Design Decisions & Challenges
+What I Did in the Code
+Design Choices I Made
+1. Color System
 
- Design Decisions
-1. Color System 
-   I used the provided CSS variables for consistency and added a dark theme override to allow theme switching.
+Used CSS variables for easy theme changes
 
-2. Typography  
-   A clean sans-serif font (Arial) was chosen for readability and modern design.
+Made primary, secondary, success, warning colors
 
-3. Cards 
-   Rounded corners with shadows for a modern soft look  and Hover lift effect for interactivity.
+Added dark mode for night viewing
 
-4. Buttons 
-   Distinct color variants (primary, success, warning, info) and outline styles for flexibility
+Created blue and green theme options
 
-5. Chips  
-   Compact pill-shaped design with icons and a close button. Active state highlighted with primary color.
+2. Component Styling
 
-6. Navigation Bar 
-   Horizontal layout with active link indicator (underline). Logo aligned left, theme toggle on right.
+Made cards with shadow and hover effects
 
-7. Forms  
-   Consistent spacing, styled focus states with glow, and rounded corners for inputs.
+Buttons have different states (hover, active, disabled)
 
-8. Responsive Design 
-   Used grid` and flexbox with media queries and Navbar collapses into stacked layout on small screens.
+Chips can be clicked to activate/deactivate
 
-9. Theme Toggle
-   Implemented light/dark mode switching with a single button using CSS variable overrides.
+Forms have nice input fields with focus states
 
- Challenges
- Implementing responsive grids for cards without making them look cluttered.
- Ensuring hover and focus states worked consistently across light and dark modes.
+3. Layout & Spacing
 
- Conclusion
-The final design achieves:
-- Modern visual design
-- Full responsiveness
-- Interactive states
-- Theme switching
-- Clean, well-organized CSS
+Used CSS Grid for card layouts
+
+Flexbox for button groups
+
+Consistent spacing with CSS variables
+
+Mobile-first design (works on phone and computer)
+
+4. Interactive Features
+
+Added ripple effect when buttons clicked
+
+Cards lift up when you hover over them
+
+Smooth color transitions everywhere
+
+Toast messages for user feedback
+
+Challenges I Faced
+1. Theme Switching Problem
+
+Challenge: When changing themes, some colors didn't update properly
+
+Solution: Used CSS variables and JavaScript to update all colors at once
+
+2. Mobile Responsiveness
+
+Challenge: Components looked messy on small screens
+
+Solution: Used media queries and flexible layouts that adjust automatically
+
+3. Button Effects
+
+Challenge: Making the ripple effect work smoothly
+
+Solution: Created CSS animations and positioned ripples where user clicks
+
+4. Customization Panel
+
+Challenge: Real-time updates without page refresh
+
+Solution: Used JavaScript to change CSS variables instantly
+
+5. Consistent Styling
+
+Challenge: Making all components look like they belong together
+
+Solution: Used same colors, spacing, and shadows across all elements
+
+Why I Made These Choices
+For Learning:
+
+Used CSS variables to teach theme management
+
+Made components reusable and modular
+
+Showed different ways to style same elements
+
+For User Experience:
+
+Smooth animations feel modern and professional
+
+Dark mode protects eyes at night
+
+Mobile-friendly because many use phones
+
+For Code Quality:
+
+Clean, organized CSS easy to understand
+
+JavaScript separated by functionality
+
+Semantic HTML for accessibility
+
+What Works Well
+Theme changes happen instantly
+
+All components look good together
+
+Works on different screen sizes
+
+Easy to add new components
+
+Code is clean and easy to modify
+
+What Could Be Better
+Could add more theme options
+
+Some animations could be smoother
+
+Could add more component variants
