@@ -1,0 +1,98 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lab 5 - WAD621S Styling</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="logo">WAD621S</div>
+    <ul class="nav-links">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="#">Cards</a></li>
+      <li><a href="#">Buttons</a></li>
+      <li><a href="#">Forms</a></li>
+    </ul>
+    <button class="theme-toggle">🌙</button>
+  </nav>
+
+  <main>
+    <!-- Cards -->
+    <section class="cards">
+      <h2>Cards</h2>
+      <div class="card-grid">
+        <div class="card">
+          <img src="https://picsum.photos/300/200" alt="Random Image" />
+          <div class="card-content">
+            <h3>Card Title</h3>
+            <p>This is a simple card with hover and shadow effects.</p>
+            <button class="btn primary">Read More</button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://picsum.photos/301/200" alt="Random Image" />
+          <div class="card-content">
+            <h3>Second Card</h3>
+            <p>Consistent rounded corners and transitions applied.</p>
+            <button class="btn outline">Learn More</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Buttons -->
+    <section class="buttons">
+      <h2>Buttons</h2>
+      <div class="btn-group">
+        <button class="btn primary">Primary</button>
+        <button class="btn success">Success</button>
+        <button class="btn warning">Warning</button>
+        <button class="btn info">Info</button>
+        <button class="btn outline">Outline</button>
+        <button class="btn disabled" disabled>Disabled</button>
+      </div>
+    </section>
+
+    <!-- Chips -->
+    <section class="chips">
+      <h2>Chips</h2>
+      <div class="chip active">
+        Active Chip <span class="close">&times;</span>
+      </div>
+      <div class="chip">
+        Default Chip <span class="close">&times;</span>
+      </div>
+      <div class="chip">
+        With Icon <span>⭐</span>
+      </div>
+    </section>
+
+    <!-- Forms -->
+    <section class="forms">
+      <h2>Forms</h2>
+      <form>
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="Enter your name" />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Enter your email" />
+
+        <label for="message">Message</label>
+        <textarea id="message" rows="4" placeholder="Type here..."></textarea>
+
+        <button class="btn primary" type="submit">Submit</button>
+      </form>
+    </section>
+  </main>
+</body>
+<script>
+  // Theme toggle script
+  const toggle = document.querySelector(".theme-toggle");
+  toggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark-theme");
+  });
+</script>
+</html>
